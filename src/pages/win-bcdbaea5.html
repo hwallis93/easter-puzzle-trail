@@ -1,0 +1,43 @@
+<html>
+  <style>
+    .mainContainer {
+      width: 100%;
+      height: 100%;
+      background-color: pink;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      font-size: 50px;
+      font-weight: bold;
+    }
+    #shadowBox {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .rainbow_text_animated {
+      background: linear-gradient(to right, #66f, #09f, #0f0, #ff0, #f39, #66f);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: rainbow_animation 2s ease-in-out infinite;
+      background-size: 400% 100%;
+    }
+
+    @keyframes rainbow_animation {
+      0%,
+      100% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 100% 0;
+      }
+    }
+  </style>
+  <body style="margin: 0">
+    <div class="mainContainer">
+      <div id="shadowBox">
+        <div class="rainbow_text_animated">🌟 CONGRATULATIONS 🌟</div>
+      </div>
+    </div>
+  </body>
+</html>

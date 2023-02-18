@@ -1,54 +1,45 @@
-# Astro Starter Kit: Basics
+Todo:
+- Main
+  - ironingot.com
+  - Make poster/puzzle 1
+  - hint dates
+  - Netlify deploy
 
-```
-npm create astro@latest -- --template basics
-```
+- Win
+  - Comic sans
+  - Rainbow background
+  - Animated images/text
+  - 90s mouse effect crap
+  - rick roll gif in the corner behind a "click me" button
+  - you lost the game
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+https://profound-duckanoo-066b46.netlify.app/
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+abcdefghijklm nopqrstu vwxyz
+robduckingham efjlpqst vwxyz
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+abcdefghijklmnopqrstu
+lcfdnojkhpgqmibrsatue
 
+	 }
 
-## 🚀 Project Structure
+## Stage 1
 
-Inside of your Astro project, you'll see the following folders and files:
+Cybernetics Easter Puzzle Trail
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Welcome to the cybernetices easter puzzle trail! There are 3 puzzles altogether - the solution to puzzle 1 points to puzzle 2, and likewise 2 points to 3.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+A new hint or solution will be added each day. Check back the next day if you get stuck.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Happy hunting!
 
-Any static assets, like images, can be placed in the `public/` directory.
+Puzzle 1
 
-## 🧞 Commands
+...minecraft layouts
 
-All commands are run from the root of the project, from a terminal:
+Hint: ...QR code to stage1hints.com
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+stage1hints.com
+Hint 1: www.minecraftironingot.com
+Hint 2: Replace items with their recipes as per the link above
+Solution: After replacing the items with their recipes the iron ingots spell out bit.ly/whatever. Head there for stage 2.

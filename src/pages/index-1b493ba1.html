@@ -1,0 +1,283 @@
+<html>
+  <script>
+    const letters = [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z",
+    ];
+
+    // addTitle();
+    // document.getElementById("popup").innerHTML = inputString;
+    // function submit(e) {
+    //   const inputValue = document.getElementById("password").value;
+    //   backend.send(inputValue).then((json) => {
+    //     if (json.message === "wrong") {
+    //       alert("Wrong password");
+    //     } else {
+    //       window.location = json.message;
+    //     }
+    //   });
+    // }
+
+    const inputString =
+      '<input id="password" placeholder="Password" /> <button onClick="submit()">Submit</button>';
+
+    const encryptedText = `
+ 	lddUhuqn();
+ 	 dbfemniu.jnuNqnmniuCyHd("rbrer").hiinaKUMQ = hireuTuahij;
+  oeifuhbi tecmhu() {
+   fbitu hireuVlqen = dbfemniu.jnuNqnmniuCyHd("rlttwbad").vlqen;
+ clfgnid.tnid(hireuVlqen).ukni((ptbi) => {
+   ho (ptbi.mnttljn === "wabij") {
+  lqnau("Wabij rlttwbad");
+ 	 } nqtn {
+  whidbw.qbfluhbi = ptbi.mnttljn;
+ 	}
+	 });}
+         `;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("encryptedText").textContent = encryptedText;
+
+      for (const letter of letters) {
+        const inputElement = document.getElementById("input" + letter);
+        const savedValue = localStorage.getItem(letter);
+
+        if (letters.includes(savedValue)) {
+          inputElement.value = savedValue.toLowerCase();
+        }
+      }
+      onInput();
+    });
+
+    const backend = {
+      send: (password) => {
+        return fetch("/password-check", {
+          method: "post",
+          body: JSON.stringify({ password }),
+        }).then((x) => x.json());
+      },
+    };
+
+    function addTitle() {
+      document.getElementById("title").textContent =
+        "RACE Easter Treasure Trail - Stage 3";
+      document.getElementById("description").textContent =
+        "The password is hidden in the weirdness of the code";
+    }
+
+    function onInput() {
+      /** @type Record<string, string> */
+      const decryptionMap = {};
+
+      for (const encryptedLetter of letters) {
+        /** @type string */
+        let decryptedLetter = document.getElementById(
+          "input" + encryptedLetter
+        ).value;
+
+        if (decryptedLetter.length > 1) {
+          decryptedLetter = decryptedLetter[0];
+          document.getElementById("input" + encryptedLetter).value =
+            decryptedLetter;
+        }
+
+        if (![...letters, ""].includes(decryptedLetter.toUpperCase())) {
+          document.getElementById("input" + encryptedLetter).value = "";
+          continue;
+        }
+
+        if (decryptedLetter === "") {
+          decryptedLetter = encryptedLetter;
+        }
+
+        const encryptedLower = encryptedLetter.toLowerCase();
+        const encryptedUpper = encryptedLetter.toUpperCase();
+        const decryptedLower = decryptedLetter.toLowerCase();
+        const decryptedUpper = decryptedLetter.toUpperCase();
+
+        decryptionMap[encryptedLower] = decryptedLower;
+        decryptionMap[encryptedUpper] = decryptedUpper;
+      }
+
+      let decryptedText = "";
+
+      for (const encryptedLetter of encryptedText) {
+        let decryptedLetter = decryptionMap[encryptedLetter];
+        if (decryptedLetter === undefined) {
+          decryptedLetter = encryptedLetter;
+        }
+
+        decryptedText += decryptedLetter;
+      }
+      document.getElementById("encryptedText").textContent = decryptedText;
+      saveDecryptionInputs();
+    }
+
+    function showHint(id) {
+      document.getElementById("hint" + id).style.display = "block";
+    }
+    function saveDecryptionInputs() {
+      for (const letter of letters) {
+        const inputElement = document.getElementById("input" + letter);
+        localStorage.setItem(letter, inputElement.value.toUpperCase());
+      }
+    }
+  </script>
+  <body>
+    <h2>RACE Easter Treasure Trail - Stage 2</h2>
+    <div>
+      The text below is encrypted with a substitution cipher. Decrypt and use it
+      to access stage 3.
+    </div>
+    <div style="font-style: italic; color: #cc0000">
+      Note: This will only work on a desktop browser. Sorry.
+    </div>
+    <br />
+    <div id="decrypter">
+      <div class="decrypter-row-label">Encrypted letter:</div>
+      <div class="encrypted-letter">A</div>
+      <div class="encrypted-letter">B</div>
+      <div class="encrypted-letter">C</div>
+      <div class="encrypted-letter">D</div>
+      <div class="encrypted-letter">E</div>
+      <div class="encrypted-letter">F</div>
+      <div class="encrypted-letter">G</div>
+      <div class="encrypted-letter">H</div>
+      <div class="encrypted-letter">I</div>
+      <div class="encrypted-letter">J</div>
+      <div class="encrypted-letter">K</div>
+      <div class="encrypted-letter">L</div>
+      <div class="encrypted-letter">M</div>
+      <div class="encrypted-letter">N</div>
+      <div class="encrypted-letter">O</div>
+      <div class="encrypted-letter">P</div>
+      <div class="encrypted-letter">Q</div>
+      <div class="encrypted-letter">R</div>
+      <div class="encrypted-letter">S</div>
+      <div class="encrypted-letter">T</div>
+      <div class="encrypted-letter">U</div>
+      <div class="encrypted-letter">V</div>
+      <div class="encrypted-letter">W</div>
+      <div class="encrypted-letter">X</div>
+      <div class="encrypted-letter">Y</div>
+      <div class="encrypted-letter">Z</div>
+      <div class="decrypter-row-label">Decrypted letter:</div>
+      <input id="inputA" oninput="onInput('A', this.value)" type="text" />
+      <input id="inputB" oninput="onInput('B', this.value)" type="text" />
+      <input id="inputC" oninput="onInput('C', this.value)" type="text" />
+      <input id="inputD" oninput="onInput('D', this.value)" type="text" />
+      <input id="inputE" oninput="onInput('E', this.value)" type="text" />
+      <input id="inputF" oninput="onInput('F', this.value)" type="text" />
+      <input id="inputG" oninput="onInput('G', this.value)" type="text" />
+      <input id="inputH" oninput="onInput('H', this.value)" type="text" />
+      <input id="inputI" oninput="onInput('I', this.value)" type="text" />
+      <input id="inputJ" oninput="onInput('J', this.value)" type="text" />
+      <input id="inputK" oninput="onInput('K', this.value)" type="text" />
+      <input id="inputL" oninput="onInput('L', this.value)" type="text" />
+      <input id="inputM" oninput="onInput('M', this.value)" type="text" />
+      <input id="inputN" oninput="onInput('N', this.value)" type="text" />
+      <input id="inputO" oninput="onInput('O', this.value)" type="text" />
+      <input id="inputP" oninput="onInput('P', this.value)" type="text" />
+      <input id="inputQ" oninput="onInput('Q', this.value)" type="text" />
+      <input id="inputR" oninput="onInput('R', this.value)" type="text" />
+      <input id="inputS" oninput="onInput('S', this.value)" type="text" />
+      <input id="inputT" oninput="onInput('T', this.value)" type="text" />
+      <input id="inputU" oninput="onInput('U', this.value)" type="text" />
+      <input id="inputV" oninput="onInput('V', this.value)" type="text" />
+      <input id="inputW" oninput="onInput('W', this.value)" type="text" />
+      <input id="inputX" oninput="onInput('X', this.value)" type="text" />
+      <input id="inputY" oninput="onInput('Y', this.value)" type="text" />
+      <input id="inputZ" oninput="onInput('Z', this.value)" type="text" />
+    </div>
+    <pre id="encryptedText"></pre>
+    <h2 id="title"></h2>
+    <div id="description"></div>
+    <br />
+    <div id="popup"></div>
+    <h3>Hints</h3>
+    <div class="hints-container">
+      <div>Stage 2 Hint 1</div>
+      <div class="hint-container">
+        <div class="coming-soon">Coming March 25th</div>
+      </div>
+      <div>Stage 2 Hint 2</div>
+      <div class="hint-container">
+        <div class="coming-soon">Coming March 26th</div>
+      </div>
+      <div>Stage 2 Hint 3</div>
+      <div class="hint-container">
+        <div class="coming-soon">Coming March 27th</div>
+      </div>
+      <div>Stage 2 Solution</div>
+      <div class="hint-container">
+        <div class="coming-soon">Coming March 28th</div>
+      </div>
+      <div>Stage 3 Hint 1</div>
+      <div class="hint-container">
+        <div class="coming-soon">Coming March 29th</div>
+      </div>
+      <div>Stage 3 Hint 2</div>
+      <div class="hint-container">
+        <div class="coming-soon">Coming March 29th</div>
+      </div>
+      <div>Stage 3 Solution</div>
+      <div class="hint-container">
+        <div class="coming-soon">Coming March 30th</div>
+      </div>
+    </div>
+  </body>
+  <style>
+    #decrypter {
+      display: grid;
+      grid: 20px 20px / max-content repeat(26, 20px);
+    }
+    .decrypter-row-label {
+      padding-right: 10px;
+    }
+    .encrypted-letter {
+      display: grid;
+      align-content: center;
+      justify-content: center;
+    }
+    .coming-soon {
+      font-style: italic;
+    }
+    .hints-container {
+      display: grid;
+      grid: repeat(6, auto) / max-content 1fr;
+      column-gap: 30px;
+      row-gap: 5px;
+    }
+    .hint-container {
+      display: flex;
+      gap: 5px;
+    }
+    .hint {
+      display: none;
+    }
+  </style>
+</html>

@@ -1,0 +1,61 @@
+<html>
+  <script>
+    function showHint(id) {
+      document.getElementById("hint" + id).style.display = "block";
+    }
+  </script>
+  <h2>RACE Easter Puzzle Hunt - Stage 1 hints</h2>
+  <div class="hints-container">
+    <div>Stage 1 Hint 1</div>
+    <div class="hint-container">
+      <div class="coming-soon">www.minecraftironingot.com</div>
+    </div>
+    <div>Stage 1 Hint 2</div>
+    <div class="hint-container">
+      <div class="coming-soon">Coming March 25th</div>
+      <button onClick="showHint(1)">Show</button>
+      <div class="hint" id="hint1">
+        Replace items with their recipes as per the link above
+      </div>
+    </div>
+    <div>Stage 1 Solution</div>
+    <div class="hint-container">
+      <div class="coming-soon">Coming March 25th</div>
+      <button onClick="showHint(2)">Show</button>
+      <div class="hint" id="hint2">
+        After replacing the items with their recipes the iron ingots spell out
+        bit.ly/whatever. Head there for stage 2.
+      </div>
+    </div>
+  </div>
+  <style>
+    #decrypter {
+      display: grid;
+      grid: 20px 20px / max-content repeat(26, 20px);
+    }
+    .decrypter-row-label {
+      padding-right: 10px;
+    }
+    .encrypted-letter {
+      display: grid;
+      align-content: center;
+      justify-content: center;
+    }
+    .coming-soon {
+      font-style: italic;
+    }
+    .hints-container {
+      display: grid;
+      grid: repeat(6, auto) / max-content 1fr;
+      column-gap: 30px;
+      row-gap: 5px;
+    }
+    .hint-container {
+      display: flex;
+      gap: 5px;
+    }
+    .hint {
+      display: none;
+    }
+  </style>
+</html>
