@@ -8,7 +8,8 @@
   <div class="hints-container">
     <div>Stage 1 Hint 1</div>
     <div class="hint-container">
-      <div class="coming-soon">
+      <button onClick="showHint(1)">Show</button>
+      <div class="hint" id="hint1">
         <a href="https://minecraft.fandom.com/wiki/Iron_Ingot#Usage"
           >https://minecraft.fandom.com/wiki/Iron_Ingot#Usage</a
         >
@@ -16,21 +17,20 @@
     </div>
     <div>Stage 1 Hint 2</div>
     <div class="hint-container">
-      <div class="coming-soon">Coming March 29th</div>
-      <button onClick="showHint(1)">Show</button>
-      <div class="hint" id="hint1">
+      <button onClick="showHint(2)">Show</button>
+      <div class="hint" id="hint2">
         Replace items with their recipes as per the link above, including
         rotation
       </div>
     </div>
     <div>Stage 1 Solution</div>
     <div class="hint-container">
-      <div class="coming-soon">Coming March 30th</div>
-      <button onClick="showHint(2)">Show</button>
-      <div class="hint" id="hint2">
+      <button onClick="showHint(3)">Show</button>
+      <div class="hint" id="hint3">
         After replacing the items with their recipes (rotated the same amount as
         the image) the iron ingots spell out
-        <a href="bit.ly/3bieyh">bit.ly/3bieyh</a>. Head there for stage 2.
+        <a href="https://bit.ly/3bieyh">bit.ly/3bieyh</a>. Head there for stage
+        2.
       </div>
     </div>
   </div>
@@ -46,9 +46,6 @@
       display: grid;
       align-content: center;
       justify-content: center;
-    }
-    .coming-soon {
-      font-style: italic;
     }
     .hints-container {
       display: grid;
